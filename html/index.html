@@ -21,7 +21,7 @@ margin: 0;
 padding: 0;
 }
 
-.twoColLiqLtHdr #container { 
+.twoCol #container { 
 width: 70%;  
 background: #FFFFFF;
 margin: 0; 
@@ -29,9 +29,14 @@ border: 0;
 text-align: left; 
 } 
 
-h1{
+h1 {
 font-size:18px;
 color: #202020;
+}
+
+
+#orange {
+font-color: "CC6600";
 }
 
 cutline{
@@ -39,9 +44,32 @@ font-size:14px;
 color: #666666
 }
 
+.twoCol #sidebar1 {
+float: left; 
+width: 30%;
+margin-left: 15px; 
+margin-right: 10px;
+}
+
+.twoCol #sidebar1 image, .twoCol #sidebar1 cutline {
+width: 169px;
+height: 265px;
+padding: 0 5px;
+}
+
+.twoCol #sidebar1 caption {
+float: left; 
+width: 30%;
+margin-left: 15px; 
+margin-right: 10px;
+}
+
+
 <h1>Texas puts perfect mark on line at Kansas State</h1>
 
-<p>By Mark Rosner <br />
+<div id= "container">
+
+<p>By <div id= "orange">Mark Rosner </div><br />
 AMERICAN-STATESMAN STAFF</p>
 
 <p>Updated: 11:17 p.m. Sunday, Jan. 17, 2010<br />
@@ -68,6 +96,13 @@ tell by their games in recent seasons.Barnes is 8-4 against Kansas State. The Lo
 five of those games were decided by four points or fewer. Texas has won the last but five of those games were decided by 
 
 four points or fewer. Texas has won the last two in Manhattan. K-State has a two-game winning streak in Austin.      </p>
+</div>
+
+<div id= "sidebar1">
+<div id= "sidebar1 image"><img src="images/basketball.jpg" width="169" height="265" alt="score" /></div>
+<div id= "sidebar1 cutline"> Laura Skelding/AMERICAN STATESMAN</div>
+<div id= "sidebar1 caption"> Texas senior forward Damion James and freshman guard Avery Bradley will be on alert against Kansas State just as they were against Texas A&M's David Loubeau, center, on Saturday.</div>
+</div>
 
 
 <script src="jquery-1.4.min.js"></script>
