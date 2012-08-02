@@ -10,6 +10,35 @@
 <body>
 
 <style type="text/css">
+<script src="jquery-1.4.min.js" type="text/javascript"></script>
+
+<canvas id="myCanvas" width="665" height="666" />
+
+var ctx, canvas, centerX, centerY;
+
+
+$(document).ready(function() {
+canvas = document.getElementById('myCanvas');
+ctx = canvas.getContext('2d');
+centerX = canvas.width/2;
+centerY = canvas.height/2;
+
+
+drawInnerGradient();
+});
+
+
+function drawInnerGradient() {
+ctx.beginPath();
+var gradient= ctx.createLinearGradient(centerX, 20, centerX, 200);
+gradient.addColorStop(0, '#CCCCCC');
+gradient.addColorStop(1, '#FFFFFF');
+ctx.fillStyle = gradient;
+ctx.rect(40, 40, canvas.width - 80, canvas.height - 80);
+ctx.fill();
+ctx.closePath();
+}
+
 
 body {
 font-family: Georgia, "Times New Roman", Times, serif and Arial, "MS Trebuchet", sans-serif;
@@ -104,11 +133,11 @@ four points or fewer. Texas has won the last two in Manhattan. K-State has a two
 <div id= "sidebar1 caption"> Texas senior forward Damion James and freshman guard Avery Bradley will be on alert against Kansas State just as they were against Texas A&M's David Loubeau, center, on Saturday.</div>
 </div>
 
-
-<script src="jquery-1.4.min.js"></script>
-   
+       
  <script>
       
+
+
     </script>
 
 </body>
